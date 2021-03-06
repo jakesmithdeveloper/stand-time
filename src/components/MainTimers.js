@@ -14,10 +14,17 @@ const MainTimers = (props) => {
       >
         Toggle
       </button>
-      <Timer title="Sit" />
-      <Timer title="Stand" />
+      <Timer title="Sit" seconds={props.sit} />
+      <Timer title="Stand" seconds={props.stand} />
     </div>
   );
 };
 
-export default connect(null, { toggleDarkmode })(MainTimers);
+const mapStateToProps = (state) => {
+  return {
+    sit: state.timers.sit,
+    stand: state.timers.stand,
+  };
+};
+
+export default connect(mapStateToProps, { toggleDarkmode })(MainTimers);
