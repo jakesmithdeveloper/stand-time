@@ -1,19 +1,32 @@
 import React from "react";
+import { Router, Route } from "react-router-dom";
+import { connect } from "react-redux";
 
-import Timer from "./Timer";
+import MainTimers from "./MainTimers";
+import TimerPage from "./TimerPage";
+
+import history from "../history";
 
 import "../index.css";
 
-const App = () => {
+const App = (props) => {
+  const renderMode = props.darkmode ? "dark" : "";
+
   return (
-    <div className="bg-blue-sea" style={{ height: "100vh" }}>
-      <h1 className="text-gray-50 text-4xl text-center py-4 tracking-wider">
-        Stand Stopwatch
-      </h1>
-      <Timer title="Sit" />
-      <Timer title="Stand" />
+    <div className={renderMode}>
+      <Router history={history}>
+        <Route path="/" exact component={MainTimers} />
+        <Route path="/sit" exact component={TimerPage} />
+        <Route path="/stand" exact component={TimerPage} />
+      </Router>
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => {
+  return {
+    darkmode: state.darkmode.darkmode,
+  };
+};
+
+export default connect(mapStateToProps)(App);
