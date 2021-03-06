@@ -1,11 +1,19 @@
 import React from "react";
 
-const TimerPage = () => {
+import { connect } from "react-redux";
+
+const TimerPage = ({ mode }) => {
   return (
     <div>
-      <h1>Timer Page</h1>
+      <h1>{mode}</h1>
     </div>
   );
 };
 
-export default TimerPage;
+const mapStateToProps = (state, ownProps) => {
+  return {
+    mode: ownProps.match.params.id,
+  };
+};
+
+export default connect(mapStateToProps)(TimerPage);
