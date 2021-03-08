@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import MainTimers from "./MainTimers";
 import TimerPage from "./TimerPage";
+import { Helmet } from "react-helmet";
 
 import history from "../history";
 
@@ -14,7 +15,12 @@ const App = (props) => {
 
   return (
     <div className={renderMode} style={{ height: "100%" }}>
-      <div className="dark:bg-gray-900 bg-blue-sea h-full">
+      <Helmet>
+        <body
+          className={props.darkmode ? "dark:bg-gray-900" : "bg-blue-sea"}
+        ></body>
+      </Helmet>
+      <div className="dark:bg-gray-900 bg-blue-sea">
         <Router history={history}>
           <Switch>
             <Route path="/" exact component={MainTimers} />
