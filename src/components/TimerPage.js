@@ -33,6 +33,7 @@ const TimerPage = ({ mode, timerValue, timerTick }) => {
           type="text"
           defaultValue={secondsToDisplay(timerValue)}
           value={secondsToDisplay(timerValue)}
+          readOnly
         />
       </div>
       <Link
