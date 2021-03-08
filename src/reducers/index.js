@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
 import darkmodeReducer from "./darkmodeReducer";
-import timerTickReducer from "./timerTickReducer";
+import timerReducer from "./timerReducer";
 
 export default combineReducers({
   darkmode: darkmodeReducer,
-  timers: timerTickReducer,
+  timers: timerReducer,
 });

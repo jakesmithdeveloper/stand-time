@@ -1,4 +1,4 @@
-import { TOGGLE_DARKMODE, TIMER_TICK } from "./types";
+import { TOGGLE_DARKMODE, TIMER_TICK, EDIT_TIMER, CLEAR_TIMER } from "./types";
 
 export const toggleDarkmode = () => {
   return {
@@ -11,4 +11,15 @@ export const timerTick = (timerId) => {
     type: TIMER_TICK,
     payload: timerId,
   };
+};
+
+export const editTimer = (amount, mode) => {
+  return {
+    type: EDIT_TIMER,
+    payload: { amount, mode },
+  };
+};
+
+export const clearTimer = (mode) => {
+  return { type: CLEAR_TIMER, payload: mode };
 };
