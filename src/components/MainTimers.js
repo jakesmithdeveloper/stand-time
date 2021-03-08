@@ -7,7 +7,9 @@ import { toggleDarkmode } from "../actions";
 
 const MainTimers = ({ sit, stand, toggleDarkmode }) => {
   useEffect(() => {
-    document.title = `${secondsToDisplay(sit)} | ${secondsToDisplay(stand)}`;
+    document.title = `↓ ${secondsToDisplay(sit)} | ↑ ${secondsToDisplay(
+      stand
+    )}`;
   }, [sit, stand]);
 
   return (

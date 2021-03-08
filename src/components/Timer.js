@@ -76,7 +76,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         {title}
       </h1>
       <img
-        className="mb-5 rounded-2xl shadow-lg max-w-sm sm: w-10/12"
+        className="mb-5 rounded-2xl shadow-2xl max-w-sm sm: w-10/12"
         src={Images[title.toLowerCase()]}
         alt=""
       />

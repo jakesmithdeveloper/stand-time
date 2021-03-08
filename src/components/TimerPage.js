@@ -9,8 +9,8 @@ import "../index.css";
 const TimerPage = ({ mode, timerValue, timerTick }) => {
   useEffect(() => {
     document.title = `${
-      mode === "sit" ? "Sitting" : "Standing"
-    } ${secondsToDisplay(timerValue)}`;
+      mode === "sit" ? "Sitting ↓" : "Standing ↑"
+    } | ${secondsToDisplay(timerValue)}`;
   }, [timerValue, mode]);
 
   useEffect(() => {
