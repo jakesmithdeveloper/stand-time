@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import TimerDisplay from "./TimerDisplay";
 
-import history from "../history";
 import { editTimer, clearTimer } from "../actions";
+import history from "../history";
+import Images from "../images/images";
 
 import "../index.css";
 
@@ -75,8 +76,8 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         {title}
       </h1>
       <img
-        className="mb-5 rounded-full shadow-lg"
-        src="http://www.fillmurray.com/200/200"
+        className="mb-5 rounded-2xl shadow-lg max-w-sm sm: w-10/12"
+        src={Images[title.toLowerCase()]}
         alt=""
       />
       <TimerDisplay seconds={seconds} editMode={editMode} />

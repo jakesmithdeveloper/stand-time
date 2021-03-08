@@ -8,6 +8,12 @@ import "../index.css";
 
 const TimerPage = ({ mode, timerValue, timerTick }) => {
   useEffect(() => {
+    document.title = `${
+      mode === "sit" ? "Sitting" : "Standing"
+    } ${secondsToDisplay(timerValue)}`;
+  }, [timerValue, mode]);
+
+  useEffect(() => {
     const interval = setInterval(() => {
       timerTick(mode);
     }, 1000);
