@@ -3,10 +3,17 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      maxWidth: {
+        "logo-large": "75px",
+        "logo-small": "50px",
+      },
       colors: {
-        "blue-sea": "#279AF1",
-        brown: "#A7754D",
+        "blue-sea": "#F1FEC6",
+        brown: "#1D7874",
         "dark-font": "#2B303A",
+        "light-font": "#667761",
+        "royal-purple": "#735290",
+        "jungle-green": "#000F08",
       },
     },
   },

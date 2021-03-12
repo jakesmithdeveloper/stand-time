@@ -9,6 +9,17 @@
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: "RocknRoll One", sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+  }
+}
+
 body {
   font-family: "Lobster";
+}
+
+.logo {
+  font-family: "RocknRoll One";
 }

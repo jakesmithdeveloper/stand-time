@@ -16,7 +16,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       <div className="w-full flex justify-center space-x-4 sm: px-4">
         <button
           onClick={() => editTimer(-5, title)}
-          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
+          className=" text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
         >
           -5
         </button>
@@ -27,7 +27,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
           -1
         </button>
         <button
-          className="text-2xl w-1/5 rounded-full tracking-wider text-dark-font dark:text-gray-100 dark:bg-blue-sea"
+          className="text-2xl w-1/5 rounded-full tracking-wider text-dark-font dark:text-gray-100 dark:bg-light-font"
           onClick={() => setEditMode(false)}
         >
           done
@@ -69,7 +69,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       onClick={() => {
         if (!editMode) history.push(`/time/${title.toLowerCase()}`);
       }}
-      className="bg-brown my-6 flex flex-col items-center rounded-2xl shadow-md max-w-md sm: w-10/12 dark:bg-gray-800"
+      className="bg-brown my-6 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800"
     >
       <div className="flex-grow"></div>
       <h1 className="text-5xl mt-6 mb-6 text-dark-font dark:text-gray-300 flex-grow">

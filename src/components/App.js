@@ -17,10 +17,12 @@ const App = (props) => {
     <div className={renderMode} style={{ height: "100%" }}>
       <Helmet>
         <body
-          className={props.darkmode ? "dark:bg-gray-900" : "bg-blue-sea"}
+          className={`${
+            props.darkmode ? "dark:bg-gray-900" : "bg-blue-sea"
+          } h-full`}
         ></body>
       </Helmet>
-      <div className="dark:bg-gray-900 bg-blue-sea">
+      <div className="dark:bg-gray-900 bg-blue-sea h-full">
         <Router history={history}>
           <Switch>
             <Route path="/" exact component={MainTimers} />
