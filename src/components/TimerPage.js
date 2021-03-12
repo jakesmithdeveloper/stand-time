@@ -44,7 +44,7 @@ const TimerPage = ({ mode, timerValue, timerTick }) => {
       </div>
       <Link
         to="/"
-        className="bg-brown w-60 text-dark-font text-4xl text-center rounded-full mt-5 py-6 dark:bg-gray-800 dark:text-gray-300"
+        className="bg-brown w-60 active:bg-royal-purple transistion transform active:translate-y-2 text-dark-font text-4xl text-center rounded-full mt-5 py-6 dark:bg-gray-800 dark:text-gray-300"
       >
         Back
       </Link>

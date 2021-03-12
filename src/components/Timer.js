@@ -58,7 +58,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         e.stopPropagation();
         setEditMode(true);
       }}
-      className="my-6 text-xl text-dark-font tracking-widest dark:text-gray-100"
+      className="my-6 text-xl tracking-widest text-gray-100 bg-royal-purple dark:bg-gray-900 p-3 rounded-2xl transition-transform active:-translate-y-2"
     >
       edit
     </button>
@@ -69,7 +69,9 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       onClick={() => {
         if (!editMode) history.push(`/time/${title.toLowerCase()}`);
       }}
-      className="bg-brown my-6 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800"
+      className={`${
+        !editMode ? "transistion transform active:translate-y-2" : ""
+      } bg-brown my-6 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800`}
     >
       <div className="flex-grow"></div>
       <h1 className="text-5xl mt-6 mb-6 text-dark-font dark:text-gray-300 flex-grow">
