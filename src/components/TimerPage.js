@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { timerTick } from "../actions";
 import { secondsToDisplay } from "../helpFunctions";
 
+import Header from "./Header";
+
 import "../index.css";
 
 const TimerPage = ({ mode, timerValue, timerTick }) => {
@@ -30,6 +32,7 @@ const TimerPage = ({ mode, timerValue, timerTick }) => {
 
   return (
     <div className="flex flex-col items-center">
+      <Header />
       <div className="max-w-md bg-brown flex flex-col items-center p-12 rounded-3xl dark:bg-gray-800 sm: w-11/12 sm: mt-10 shadow-xl">
         <h3 className="text-6xl text-center my-4 mx text-dark-font dark:text-gray-300">
           {timerPageConfig.title}
