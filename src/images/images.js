@@ -1,9 +1,7 @@
 import chairBlack from "./chair_black.png";
 import chairDark from "./chair_dark.png";
-import chairWhite from "./chair_white.png";
 import tableBlack from "./table_black.png";
 import tableDark from "./table_dark.png";
-import tableWhite from "./table_white.png";
 import sit from "./sit.jpeg";
 import stand from "./stand.jpg";
 
@@ -12,10 +10,8 @@ const Images = {
   stand,
   chairBlack,
   chairDark,
-  chairWhite,
   tableBlack,
   tableDark,
-  tableWhite,
 };
 
 export default Images;
