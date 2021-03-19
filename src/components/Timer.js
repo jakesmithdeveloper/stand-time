@@ -17,18 +17,18 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       <div className="w-full flex justify-center space-x-4 sm: px-4">
         <button
           onClick={() => editTimer(-5, title)}
-          className=" text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
+          className=" text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400 focus:outline-none active:border-gray-100 active:text-gray-100"
         >
           -5
         </button>
         <button
           onClick={() => editTimer(-1, title)}
-          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
+          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400 focus:outline-none active:border-gray-100 active:text-gray-100"
         >
           -1
         </button>
         <button
-          className="text-2xl w-1/5 rounded-full tracking-wider text-dark-font dark:text-gray-100 dark:bg-light-font"
+          className="text-2xl w-1/5 rounded-full tracking-wider text-dark-font dark:text-gray-100 dark:bg-light-font focus:outline-none active:text-green-500"
           onClick={() => {
             setEditMode(false);
             setShouldBounce(true);
@@ -38,20 +38,20 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         </button>
         <button
           onClick={() => editTimer(1, title)}
-          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
+          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400 focus:outline-none active:border-gray-100 active:text-gray-100"
         >
           +1
         </button>
         <button
           onClick={() => editTimer(5, title)}
-          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400"
+          className="text-3xl w-1/6 border-2 rounded-full p-2 border-dark-font text-dark-font dark:text-gray-100 dark:border-gray-400 focus:outline-none active:border-gray-100 active:text-gray-100"
         >
           +5
         </button>
       </div>
       <button
         onClick={() => clearTimer(title)}
-        className="dark:bg-red-600 text-red-700 text-2xl w-1/6 py-3 rounded-full tracking-wider  dark:text-gray-100 mt-2"
+        className="dark:bg-red-600 text-red-700 text-2xl w-1/6 py-3 rounded-full tracking-wider  dark:text-gray-100 mt-2 focus:outline-none active:text-red-500"
       >
         clear
       </button>
@@ -63,7 +63,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         setEditMode(true);
         setShouldBounce(false);
       }}
-      className="my-6 text-xl tracking-widest text-gray-100 bg-royal-purple dark:bg-gray-900 p-3 rounded-2xl transition-transform active:-translate-y-2"
+      className="my-6 text-xl tracking-widest text-gray-100 bg-royal-purple dark:bg-gray-900 p-3 rounded-2xl transition-transform active:-translate-y-2 focus:outline-none"
     >
       edit
     </button>

@@ -34,11 +34,11 @@ const TimerPage = ({ mode, timerValue, timerTick }) => {
     <div className="flex flex-col items-center">
       <Header />
       <div className="max-w-md bg-brown flex flex-col items-center p-12 rounded-3xl dark:bg-gray-800 sm: w-11/12 sm: mt-10 shadow-xl">
-        <h3 className="text-6xl text-center my-4 mx text-dark-font dark:text-gray-300">
+        <h3 className="text-6xl text-center my-4 mx text-dark-font dark:text-gray-300 unselectable">
           {timerPageConfig.title}
         </h3>
         <input
-          className="bg-dark-font text-gray-300 my-10 w-11/12 h-24 rounded-full text-center text-6xl dark:bg-gray-900"
+          className="bg-dark-font text-gray-300 my-10 w-11/12 h-24 rounded-full text-center text-6xl dark:bg-gray-900 focus:outline-none"
           type="text"
           defaultValue={secondsToDisplay(timerValue)}
           value={secondsToDisplay(timerValue)}
@@ -47,7 +47,7 @@ const TimerPage = ({ mode, timerValue, timerTick }) => {
       </div>
       <Link
         to="/"
-        className="bg-brown w-60 active:bg-royal-purple transistion transform active:translate-y-2 text-dark-font text-4xl text-center rounded-full mt-5 py-6 dark:bg-gray-800 dark:text-gray-300"
+        className="bg-brown w-60 active:bg-royal-purple transistion transform active:translate-y-2 text-dark-font text-4xl text-center rounded-full mt-5 py-6 dark:bg-gray-800 dark:text-gray-300 unselectable"
       >
         Back
       </Link>

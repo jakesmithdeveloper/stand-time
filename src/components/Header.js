@@ -11,15 +11,15 @@ const Header = ({ toggleDarkmode, darkMode }) => {
         <img
           src={darkMode ? Images.tableDark : Images.tableBlack}
           alt=""
-          className="max-w-logo-small md:max-w-logo-large"
+          className="max-w-logo-small md:max-w-logo-large unselectable"
         />
-        <h1 className="text-royal-purple py-4 tracking-widest dark:text-gray-100 ml-3 text-4xl md:text-6xl">
+        <h1 className="text-royal-purple py-4 tracking-widest dark:text-gray-100 ml-3 text-4xl md:text-6xl unselectable">
           Stand Time
         </h1>
         <img
           src={darkMode ? Images.chairDark : Images.chairBlack}
           alt=""
-          className="max-w-logo-small md:max-w-logo-large"
+          className="max-w-logo-small md:max-w-logo-large unselectable"
         />
       </div>
       <div>

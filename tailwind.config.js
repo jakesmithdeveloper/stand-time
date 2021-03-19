@@ -21,6 +21,8 @@ module.exports = {
     extend: {
       translate: ["active"],
       backgroundColor: ["active"],
+      borderColor: ["active"],
+      textColor: ["active"],
     },
   },
   plugins: [],
