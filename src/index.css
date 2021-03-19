@@ -34,3 +34,9 @@ input:checked ~ .toggle__dot {
   transform: translateX(100%);
   background-color: #f1fec6;
 }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}

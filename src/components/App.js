@@ -10,16 +10,15 @@ import history from "../history";
 
 import "../index.css";
 
-const App = (props) => {
-  const renderMode = props.darkmode ? "dark" : "";
+const App = ({ darkmode }) => {
+  const renderMode = darkmode ? "dark" : "";
 
   return (
-    <div className={renderMode} style={{ height: "100%" }}>
+    <div className={`${renderMode} h-screen`}>
       <Helmet>
+        <html className="h-scren"></html>
         <body
-          className={`${
-            props.darkmode ? "dark:bg-gray-900" : "bg-blue-sea"
-          } h-full`}
+          className={`${darkmode ? "bg-gray-900" : "bg-blue-sea"} h-screen`}
         ></body>
       </Helmet>
       <div className="dark:bg-gray-900 bg-blue-sea h-full">
