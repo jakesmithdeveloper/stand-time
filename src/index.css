@@ -23,3 +23,14 @@ body {
 .logo {
   font-family: "RocknRoll One";
 }
+
+.toggle__dot {
+  top: -0.25rem;
+  left: -0.25rem;
+  transition: all 0.3s ease-in-out;
+}
+
+input:checked ~ .toggle__dot {
+  transform: translateX(100%);
+  background-color: #f1fec6;
+}

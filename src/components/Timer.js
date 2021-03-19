@@ -10,6 +10,7 @@ import "../index.css";
 
 const Timer = ({ title, seconds, editTimer, clearTimer }) => {
   const [editMode, setEditMode] = useState(false);
+  const [shouldBounce, setShouldBounce] = useState(true);
 
   const renderMode = editMode ? (
     <div className="w-full my-2 flex flex-col items-center">
@@ -28,7 +29,10 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         </button>
         <button
           className="text-2xl w-1/5 rounded-full tracking-wider text-dark-font dark:text-gray-100 dark:bg-light-font"
-          onClick={() => setEditMode(false)}
+          onClick={() => {
+            setEditMode(false);
+            setShouldBounce(true);
+          }}
         >
           done
         </button>
@@ -57,6 +61,7 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       onClick={(e) => {
         e.stopPropagation();
         setEditMode(true);
+        setShouldBounce(false);
       }}
       className="my-6 text-xl tracking-widest text-gray-100 bg-royal-purple dark:bg-gray-900 p-3 rounded-2xl transition-transform active:-translate-y-2"
     >
@@ -70,8 +75,8 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
         if (!editMode) history.push(`/time/${title.toLowerCase()}`);
       }}
       className={`${
-        !editMode ? "transistion transform active:translate-y-2" : ""
-      } bg-brown my-6 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800`}
+        shouldBounce ? "transistion transform active:translate-y-2" : ""
+      } bg-brown my-4 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800`}
     >
       <div className="flex-grow"></div>
       <h1 className="text-5xl mt-6 mb-6 text-dark-font dark:text-gray-300 flex-grow">
