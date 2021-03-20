@@ -79,11 +79,11 @@ const Timer = ({ title, seconds, editTimer, clearTimer }) => {
       } bg-brown my-4 flex flex-col items-center rounded-2xl shadow-lg max-w-md sm: w-10/12 dark:bg-gray-800`}
     >
       <div className="flex-grow"></div>
-      <h1 className="text-5xl mt-6 mb-6 text-dark-font dark:text-gray-300 flex-grow">
+      <h1 className="text-5xl mt-6 mb-6 text-dark-font dark:text-gray-300 flex-grow unselectable">
         {title}
       </h1>
       <img
-        className="mb-5 rounded-2xl shadow-2xl max-w-sm sm: w-10/12"
+        className="mb-5 rounded-2xl shadow-2xl max-w-sm sm: w-10/12 unselectable"
         src={Images[title.toLowerCase()]}
         alt=""
       />
